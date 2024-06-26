@@ -16,12 +16,13 @@ function player(){
     if(document.getElementById("player").innerHTML == "Single Player"){
         document.getElementById("player").innerHTML = "Multi Player"
         document.getElementById("p2").innerHTML = "Player Two";
-        console.log("MultiPlayer");
+        document.getElementById("p2s").innerHTML = "Player Two";
+
         type = false;
     }else{
-        document.getElementById("player").innerHTML = "Single Player"
-        console.log("sinple");
+        document.getElementById("player").innerHTML = "Single Player";
         document.getElementById("p2").innerHTML = "Computer";
+        document.getElementById("p2s").innerHTML = "Computer";
         type =  true;
     }
 }
@@ -31,9 +32,8 @@ function reset(){
         button.disabled = false;
         button.innerHTML = "";
     })
-    console.log(a);
     a = [0,0,0,0,0,0,0,0,0];
-    console.log(a);
+    b = [];
 
 }
 
@@ -47,15 +47,17 @@ function play(value){
         document.getElementById("q"+value).disabled = true;
         b.push(value);
 
-        let x = Math.floor(Math.random()*9);
-        while(b.includes(x)){
-            x = Math.floor(Math.random()*9);
+        if(b.length < 9){
+            let x = Math.floor(Math.random()*9);
+            while(b.includes(x)){
+                x = Math.floor(Math.random()*9);
+            }
+            document.getElementById("q"+x).innerHTML = 'o';
+            document.getElementById("q"+x).disabled = true;
+
+            b.push(x);
+            a[x] = 4;
         }
-        document.getElementById("q"+x).innerHTML = 'o';
-        document.getElementById("q"+x).disabled = true;
-        b.push(x);
-        a[x] = 4;
-        console.log(a);
         if(win()||loss()){
             document.querySelectorAll('.but').forEach(function(button) {
                 button.disabled = true;
@@ -76,7 +78,7 @@ function play(value){
 
     }
     count++;
-    console.log(a);
+
     if(win()||loss()){
         document.querySelectorAll('.but').forEach(function(button) {
             button.disabled = true;
@@ -84,14 +86,14 @@ function play(value){
         count = 0;
     }
     if(win()){
-        console.log("player 1 win");
+
         p1++;
         document.getElementById("p1wins").innerHTML = p1+" Wins" 
         document.getElementById("p1win").innerHTML = p1+" Wins" 
 
     }
     if(loss()){
-        console.log("player 2 win");
+        
         p2++;
         document.getElementById("p2wins").innerHTML = p2+" Wins"
         document.getElementById("p2win").innerHTML = p2+" Wins"
