@@ -13,30 +13,82 @@
         <img src="./Logo.png" alt="my logo" class="w-96">
     </header>
 
-    <div class="grid grid-cols-3 my-1 mx-auto rounded-2xl p-6 gap-3 bg-gradient-to-br from-indigo-600 to-violet-600 outline outline-teal-50" style="width: 400px; height: 400px;">
 
-        <button id="q0" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(0)"></button>
+        <!-- <div class="flex xl:hidden">
+            <div class="grid grid-cols-3 my-1 mx-auto rounded-2xl p-6 gap-3 bg-gradient-to-br from-indigo-600 to-violet-600 outline outline-teal-50" style="width: 400px; height: 400px;">
 
-        <button id="q1" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but"  onclick="play(1)"></button>
+                <button id="q0" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(0)"></button>
+        
+                <button id="q1" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but"  onclick="play(1)"></button>
+        
+                <button id="q2" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(2)"></button>
+        
+                <button id="q3" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(3)"></button>
+        
+                <button id="q4" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(4)"></button>
+        
+                <button id="q5" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(5)"></button>
+        
+                <button id="q6" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(6)"></button>
+        
+                <button id="q7" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(7)"></button>
+        
+                <button id="q8" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(8)"></div>
+            </div>
+        </div> -->
 
-        <button id="q2" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(2)"></button>
 
-        <button id="q3" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(3)"></button>
+    <div class="flex justify-around items-center flex-col xl:flex-row">
+        <div class="xl:p-5 xl:w-4/12 p-2 w-full hidden xl:block">
+            <h1 class="xl:text-7xl text-green-400 xl:font-bold capitalize text-center xl:mb-10 text-3xl font-semibold" >player one</h1>
+            <h1 class="xl:text-4xl text-[#fcd214] xl:font-bold uppercase text-center text-2xl font-semibold" id="p1wins"></h1>
+        </div>
+        <div class="flex xl:hidden w-full justify-between p-5">
+            <div class="xl:p-5 xl:w-4/12 p-2 w-full">
+                <h1 class="xl:text-7xl text-green-400 xl:font-bold capitalize text-center xl:mb-10 text-3xl font-semibold" >player one</h1>
+                <h1 class="xl:text-4xl text-[#fcd214] xl:font-bold uppercase text-center text-2xl font-semibold" id="p1win"></h1>
+            </div>
+            <div class="xl:p-5 xl:w-4/12 p-2 w-full ">
+                <h1 class="xl:text-7xl text-red-500 xl:font-bold capitalize text-center xl:mb-10 text-3xl font-semibold" id="p2">player two</h1>
+                <h1 class="xl:text-4xl text-[#fcd214] xl:font-bold uppercase text-center text-2xl font-semibold" id="p2win"></h1>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 rounded-2xl p-6 gap-3 bg-gradient-to-br from-indigo-600 to-violet-600 outline outline-teal-50 border-2" style="width: 400px; height: 400px;">
 
-        <button id="q4" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(4)"></button>
-
-        <button id="q5" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(5)"></button>
-
-        <button id="q6" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(6)"></button>
-
-        <button id="q7" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(7)"></button>
-
-        <button id="q8" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(8)"></div>
+            <button id="q0" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(0)"></button>
+    
+            <button id="q1" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but"  onclick="play(1)"></button>
+    
+            <button id="q2" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(2)"></button>
+    
+            <button id="q3" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(3)"></button>
+    
+            <button id="q4" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(4)"></button>
+    
+            <button id="q5" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(5)"></button>
+    
+            <button id="q6" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(6)"></button>
+    
+            <button id="q7" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(7)"></button>
+    
+            <button id="q8" class="rounded-2xl bg-slate-50 text-8xl overflow-hidden h-28 w-28 flex items-baseline font-black text-yellow-500 justify-center but" onclick="play(8)"></button>
+        </div>
+        <div class="p-5 w-4/12 hidden xl:block">
+            <h1 class="text-7xl text-red-500 font-bold capitalize text-center mb-10" id="p2">player two</h1>
+            <h1 class="text-4xl text-[#fcd214] font-bold uppercase text-center" id="p2wins"></h1>
+        </div>
+    
+        </div>
     </div>
     <div class="flex justify-center mx-auto p-6 gap-6" style="width: 400px;">
-        <button class="h-20 w-20 rounded-full border-8 border-violet-600 bg-yellow-300 font-extrabold" onclick="location.reload()">
+        <button class="h-20 w-20 rounded-full border-8 border-violet-600 bg-yellow-300 font-extrabold" onclick="reset()">
         RESET
         </button>
+
+        <button class="h-20 w-20 rounded-full border-8 border-violet-600 bg-yellow-300 font-extrabold" onclick="player()" id="player">
+            Multi Player
+        </button>
+        
     </div>
 </body>
 </html>
